@@ -1,0 +1,116 @@
+---
+import "../styles/graph.css";
+---
+
+<html lang="es">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Grafo Politico Peru</title>
+    <meta
+      name="description"
+      content="Mapa interactivo de relaciones entre politicos peruanos y casos de corrupcion. 69 nodos, 37 conexiones, 112 documentos de respaldo."
+    />
+    <meta property="og:title" content="Grafo Politico Peru" />
+    <meta
+      property="og:description"
+      content="Mapa interactivo de relaciones entre politicos y casos de corrupcion en Peru"
+    />
+    <link rel="icon" type="image/svg+xml" href="/favicon.svg" />
+  </head>
+  <body>
+    <div class="intro" id="intro">
+      <h1>Grafo Politico</h1>
+      <div class="sub">
+        Mapa de relaciones entre <strong>politicos</strong> y <strong
+          >casos de corrupcion</strong
+        > en Peru.<br />
+        Nodos amarillos = personas. Nodos oscuros = casos.<br />
+        Cada conexion esta basada en investigaciones fiscales, juicios y data publica.
+      </div>
+      <div class="credit">Prototipo con data verificada</div>
+      <button onclick="launch()">Explorar</button>
+    </div>
+
+    <div class="topbar">
+      <div class="topbar-left">
+        <div class="logo">Grafo Politico</div>
+      </div>
+      <div class="filter-bar">
+        <span class="filter-bar-label">Partido</span>
+        <span class="chip-reset" onclick="resetPartyFilter()">&#10005;</span>
+        <div id="party-chips" class="chip-inline"></div>
+        <div class="filter-sep"></div>
+        <span class="filter-bar-label">Vinculos</span>
+        <div id="filter-container" class="chip-inline"></div>
+      </div>
+      <div class="search-wrap">
+        <span class="search-icon">&#8981;</span>
+        <input id="search" type="text" placeholder="Buscar politico o caso..." />
+      </div>
+    </div>
+
+    <div class="sidebar" id="sidebar">
+      <h3>Nodos</h3>
+      <div class="legend-item">
+        <div class="legend-dot" style="background:var(--yellow)"></div>
+        Politico / Candidato
+      </div>
+      <div class="legend-item">
+        <div class="legend-ring" style="border-color:#666"></div>
+        Caso / Escandalo
+      </div>
+
+      <h3>Fuentes</h3>
+      <div
+        style="font-size:11px;color:var(--text-muted);line-height:1.6;padding:0 8px;"
+      >
+        Infogob &middot; JNE Declara+<br />
+        Ojo Publico (Lava Jato)<br />
+        IDL Reporteros<br />
+        Proetica &middot; Convoca<br />
+        datosabiertos.gob.pe<br />
+        Poder Judicial &middot; OSCE
+      </div>
+    </div>
+
+    <div class="info-panel" id="panel">
+      <button class="close" onclick="closePanel()">&#10005;</button>
+      <div id="panel-content"></div>
+    </div>
+
+    <div class="statsbar">
+      <div>
+        <span class="stat-val" id="s-pol">0</span><span class="stat-lbl"
+          >Politicos</span
+        >
+      </div>
+      <div>
+        <span class="stat-val" id="s-cas">0</span><span class="stat-lbl"
+          >Casos</span
+        >
+      </div>
+      <div>
+        <span class="stat-val" id="s-con">0</span><span class="stat-lbl"
+          >Conexiones</span
+        >
+      </div>
+      <div>
+        <span class="stat-val" id="s-era">0</span><span class="stat-lbl"
+          >Anos cubiertos</span
+        >
+      </div>
+      <div
+        style="margin-left:auto;color:var(--text-muted);font-family:'JetBrains Mono',monospace;font-size:10px;letter-spacing:1px;"
+      >
+        PROTOTIPO &middot; DATA ILUSTRATIVA BASADA EN FUENTES PUBLICAS
+      </div>
+    </div>
+
+    <svg id="canvas"></svg>
+
+    <script>
+      import "../scripts/graph";
+    </script>
+  </body>
+</html>
