@@ -6,15 +6,15 @@ import "../styles/graph.css";
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Grafo Politico Peru</title>
+    <title>Grafo Político Perú</title>
     <meta
       name="description"
-      content="Mapa interactivo de relaciones entre politicos peruanos y casos de corrupcion. 69 nodos, 37 conexiones, 112 documentos de respaldo."
+      content="Mapa interactivo de relaciones entre políticos peruanos y casos de corrupción. 69 nodos, 37 conexiones, 112 documentos de respaldo."
     />
-    <meta property="og:title" content="Grafo Politico Peru" />
+    <meta property="og:title" content="Grafo Político Perú" />
     <meta
       property="og:description"
-      content="Mapa interactivo de relaciones entre politicos y casos de corrupcion en Peru"
+      content="Mapa interactivo de relaciones entre políticos y casos de corrupción en Perú"
     />
     <meta property="og:image" content="/og.png" />
     <meta property="og:image:width" content="1200" />
@@ -26,13 +26,13 @@ import "../styles/graph.css";
   </head>
   <body>
     <div class="intro" id="intro">
-      <h1>Grafo Politico</h1>
+      <h1>Grafo Político</h1>
       <div class="sub">
-        Mapa de relaciones entre <strong>politicos</strong> y <strong
-          >casos de corrupcion</strong
-        > en Peru.<br />
+        Mapa de relaciones entre <strong>políticos</strong> y <strong
+          >casos de corrupción</strong
+        > en Perú.<br />
         Nodos amarillos = personas. Nodos oscuros = casos.<br />
-        Cada conexion esta basada en investigaciones fiscales, juicios y data publica.
+        Cada conexión está basada en investigaciones fiscales, juicios y data pública.
       </div>
       <div class="credit">Prototipo con data verificada</div>
       <div class="intro-actions">
@@ -43,19 +43,19 @@ import "../styles/graph.css";
 
     <div class="topbar">
       <div class="topbar-left">
-        <div class="logo">Grafo Politico</div>
+        <div class="logo">Grafo Político</div>
       </div>
       <div class="filter-bar">
         <span class="filter-bar-label">Partido</span>
         <span class="chip-reset" onclick="resetPartyFilter()">&#10005;</span>
         <div id="party-chips" class="chip-inline"></div>
         <div class="filter-sep"></div>
-        <span class="filter-bar-label">Vinculos</span>
+        <span class="filter-bar-label">Vínculos</span>
         <div id="filter-container" class="chip-inline"></div>
       </div>
       <div class="search-wrap">
         <span class="search-icon">&#8981;</span>
-        <input id="search" type="text" placeholder="Buscar politico o caso..." />
+        <input id="search" type="text" placeholder="Buscar político o caso..." />
       </div>
     </div>
 
@@ -63,11 +63,11 @@ import "../styles/graph.css";
       <h3>Nodos</h3>
       <div class="legend-item">
         <div class="legend-dot" style="background:var(--yellow)"></div>
-        Politico / Candidato
+        Político / Candidato
       </div>
       <div class="legend-item">
         <div class="legend-ring" style="border-color:#666"></div>
-        Caso / Escandalo
+        Caso / Escándalo
       </div>
 
       <h3>Fuentes</h3>
@@ -75,9 +75,9 @@ import "../styles/graph.css";
         style="font-size:11px;color:var(--text-muted);line-height:1.6;padding:0 8px;"
       >
         Infogob &middot; JNE Declara+<br />
-        Ojo Publico (Lava Jato)<br />
+        Ojo Público (Lava Jato)<br />
         IDL Reporteros<br />
-        Proetica &middot; Convoca<br />
+        Proética &middot; Convoca<br />
         datosabiertos.gob.pe<br />
         Poder Judicial &middot; OSCE
       </div>
@@ -91,7 +91,7 @@ import "../styles/graph.css";
     <div class="statsbar">
       <div>
         <span class="stat-val" id="s-pol">0</span><span class="stat-lbl"
-          >Politicos</span
+          >Políticos</span
         >
       </div>
       <div>
@@ -106,13 +106,13 @@ import "../styles/graph.css";
       </div>
       <div>
         <span class="stat-val" id="s-era">0</span><span class="stat-lbl"
-          >Anos cubiertos</span
+          >Años cubiertos</span
         >
       </div>
       <div
         style="margin-left:auto;display:flex;align-items:center;gap:16px;color:var(--text-muted);font-family:'JetBrains Mono',monospace;font-size:10px;letter-spacing:1px;"
       >
-        <span>PROTOTIPO &middot; DATA ILUSTRATIVA BASADA EN FUENTES PUBLICAS</span>
+        <span>PROTOTIPO &middot; DATA ILUSTRATIVA BASADA EN FUENTES PÚBLICAS</span>
         <a href="https://github.com/crafter-research/political-graph" target="_blank" rel="noopener noreferrer" style="color:var(--text-muted);text-decoration:none;border-left:1px solid rgba(255,255,255,0.08);padding-left:16px;transition:color 0.15s;" onmouseover="this.style.color='#ffd23f'" onmouseout="this.style.color='var(--text-muted)'">GITHUB</a>
         <a href="/legal" style="color:var(--text-muted);text-decoration:none;border-left:1px solid rgba(255,255,255,0.08);padding-left:16px;transition:color 0.15s;" onmouseover="this.style.color='#ffd23f'" onmouseout="this.style.color='var(--text-muted)'">AVISO LEGAL</a>
       </div>

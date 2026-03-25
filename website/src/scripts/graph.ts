@@ -325,7 +325,7 @@ function showPanel(d: GraphNode) {
   const p = document.getElementById("panel")!;
   const isCase = d.nodeType === "caso";
 
-  let html = `<div class="node-type-badge ${isCase ? "badge-caso" : "badge-politico"}">${isCase ? "Caso" : "Politico"}</div>`;
+  let html = `<div class="node-type-badge ${isCase ? "badge-caso" : "badge-politico"}">${isCase ? "Caso" : "Político"}</div>`;
   html += `<h2>${d.label}</h2>`;
   html += `<div class="meta">${isCase ? d.year || "" : d.role || ""}${d.monto ? " · " + d.monto : ""}</div>`;
 
@@ -336,7 +336,7 @@ function showPanel(d: GraphNode) {
     html += `<div class="info-tags">`;
     for (const t of d.tags) {
       let cls = "tag-blue";
-      if (/preso|condenad|profugo|golpe|masacre|sentencia/i.test(t))
+      if (/preso|condenad|pr[oó]fugo|golpe|masacre|sentencia/i.test(t))
         cls = "tag-red";
       else if (/investigad|suspendid|censurad|inhabilitad/i.test(t))
         cls = "tag-orange";
