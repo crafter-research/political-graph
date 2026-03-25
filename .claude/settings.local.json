@@ -4,7 +4,9 @@
       "Bash(ls \"C:\\\\Users\\\\Shiara\\\\.claude\\\\projects\\\\D--projects-political-graph\\\\memory\"\" 2>/dev/null || echo \"empty or not found \")",
       "Bash(pdftotext /d/projects/political-graph/brain/071a8be6-545e-46a3-93cc-bc2c5cfabc16.pdf -)",
       "Bash(pdftotext -enc UTF-8 /d/projects/political-graph/brain/071a8be6-545e-46a3-93cc-bc2c5cfabc16.pdf -)",
-      "Bash(bun run:*)"
+      "Bash(bun run:*)",
+      "Bash(grep \"\\\\.md$\")",
+      "Bash(ls D:/projects/political-graph/brain/*.md)"
     ]
   }
 }
