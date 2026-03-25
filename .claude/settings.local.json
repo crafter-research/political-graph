@@ -1,0 +1,7 @@
+{
+  "permissions": {
+    "allow": [
+      "Bash(ls \"C:\\\\Users\\\\Shiara\\\\.claude\\\\projects\\\\D--projects-political-graph\\\\memory\"\" 2>/dev/null || echo \"empty or not found \")"
+    ]
+  }
+}
