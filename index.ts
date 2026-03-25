@@ -527,6 +527,9 @@ const cases = [
   { id: "caso_rolex", label: "Caso Rolex", desc: "Investigación a Dina Boluarte por no declarar relojes Rolex y joyas recibidas del gobernador de Ayacucho Wilfredo Oscorima.", year: "2024-presente" },
   { id: "caso_yang", label: "Caso Zhihua Yang", desc: "Reuniones no declaradas entre el presidente del Congreso José Jerí y el empresario chino Zhihua Yang, bajo escrutinio gubernamental.", year: "Feb 2026" },
   { id: "caso_humala", label: "Caso Humala-Heredia", desc: "Aportes ilícitos de Odebrecht y del gobierno venezolano a las campañas de Ollanta Humala. US$3M de Odebrecht.", year: "2017-presente", monto: "US$3M+" },
+  { id: "caso_peculado_regional", label: "Peculado Regional", desc: "Condenas por peculado contra funcionarios y gobernadores regionales. Rehabilitados pero refleja patrón de corrupción subnacional.", year: "2005-presente" },
+  { id: "caso_contrabando", label: "Contrabando", desc: "Caso de contrabando en Puno (Dina Hancco, 2017). Pena suspendida.", year: "2017" },
+  { id: "caso_desaparicion_forzada", label: "Desaparición Forzada", desc: "Caso Exp. 00125-2023: Felix Murazzo procesado por presunto delito de desaparición forzada (Genaro Villegas, oct 1992). En casación.", year: "1992/2023-presente" },
 ];
 
 // --- POLÍTICOS (yellow nodes) ---
@@ -556,7 +559,7 @@ const politicians = [
   { id: "belaunde_llosa", label: "Rafael Belaunde Llosa", role: "Candidato 2026 · Libertad Popular", size: 12, party: "Libertad Popular" },
   { id: "valderrama", label: "Pitter Valderrama Peña", role: "Candidato 2026 · Partido Aprista Peruano", size: 13, party: "Partido Aprista Peruano" },
   { id: "belmont", label: "Ricardo Belmont Cassinelli", role: "Candidato 2026 · Partido Cívico Obras", size: 12, party: "Partido Cívico Obras" },
-  { id: "nieto_montesinos", label: "Jorge Nieto Montesinos", role: "Candidato 2026 · Partido del Buen Gobierno", size: 12, party: "Partido del Buen Gobierno" },
+  { id: "nieto_montesinos", label: "Jorge Nieto Montesinos", role: "Candidato 2026 · Partido del Buen Gobierno", size: 12, party: "Partido del Buen Gobierno", tags: ["Ex-Ministro del Interior", "Ex-Ministro de Defensa"] },
   { id: "carrasco", label: "Charlie Carrasco Salazar", role: "Candidato 2026 · Partido Demócrata Unido Perú", size: 11, party: "Partido Demócrata Unido Perú" },
   { id: "gonzales_castillo", label: "Alex Gonzales Castillo", role: "Candidato 2026 · Partido Demócrata Verde", size: 11, party: "Partido Demócrata Verde" },
   { id: "masse", label: "Armando Masse Fernández", role: "Candidato 2026 · Partido Democrático Federal", size: 11, party: "Partido Democrático Federal" },
@@ -570,12 +573,12 @@ const politicians = [
   { id: "cerron", label: "Vladimir Cerrón", role: "Candidato 2026 · Perú Libre", size: 15, party: "Perú Libre", tags: ["Candidato presidencial", "Sentencias anuladas/absuelto 2024-25", "Colusión · Negociación incompatible"] },
   { id: "grozo", label: "Wolfgang Grozo Costa", role: "Candidato 2026 · Integridad Democrática", size: 13, party: "Integridad Democrática" },
   { id: "diez_canseco", label: "Francisco Diez-Canseco Távara", role: "Candidato 2026 · Perú Acción", size: 12, party: "Perú Acción" },
-  { id: "vizcarra_mario", label: "Mario Vizcarra Cornejo", role: "Candidato 2026 · Perú Primero", size: 12, party: "Perú Primero" },
+  { id: "vizcarra_mario", label: "Mario Vizcarra Cornejo", role: "Candidato 2026 · Perú Primero", size: 12, party: "Perú Primero", tags: ["Peculado 2005 (rehabilitado)"] },
   { id: "chirinos", label: "Walter Chirinos Purizaga", role: "Candidato 2026 · Partido PRIN", size: 11, party: "Partido PRIN" },
   { id: "espa", label: "Alfonso Espá y Garcés-Álvear", role: "Candidato 2026 · Partido SICREO", size: 11, party: "Partido SICREO" },
   { id: "jaico", label: "Carlos Jaico Carranza", role: "Candidato 2026 · Perú Moderno", size: 12, party: "Perú Moderno" },
   { id: "luna_galvez", label: "José León Luna Gálvez", role: "Candidato 2026 · Podemos Perú", size: 13, party: "Podemos Perú" },
-  { id: "perez_tello", label: "María Soledad Pérez Tello", role: "Candidata 2026 · Primero la Gente", size: 12, party: "Primero la Gente" },
+  { id: "perez_tello", label: "María Soledad Pérez Tello", role: "Candidata 2026 · Primero la Gente", size: 12, party: "Primero la Gente", tags: ["Ex-Ministra de Justicia"] },
   { id: "jaimes", label: "Paul Jaimes Blanco", role: "Candidato 2026 · Progresemos", size: 11, party: "Progresemos" },
   { id: "ortiz_villano", label: "Antonio Ortiz Villano", role: "Candidato 2026 · Salvemos al Perú", size: 11, party: "Salvemos al Perú" },
   { id: "fernandez_bazan", label: "Rosario Fernández Bazán", role: "Candidata 2026 · Un Camino Diferente", size: 12, party: "Un Camino Diferente" },
@@ -592,6 +595,19 @@ const politicians = [
   { id: "buendia", label: "Ruth Buendía Mestoquiari", role: "2da VP 2026 · Ahora Nación", size: 10, party: "Ahora Nación", tags: ["Dirigente AIDESEP", "Derechos indígenas"] },
   { id: "rivera_elena", label: "Elena Rivera Huaman", role: "1er VP 2026 · Alianza Electoral Venceremos", size: 10, party: "Alianza Electoral Venceremos" },
   { id: "quintanilla_a", label: "Alberto Quintanilla Chacón", role: "2do VP 2026 · Alianza Electoral Venceremos", size: 10, party: "Alianza Electoral Venceremos", tags: ["Ex-Frente Amplio", "6 títulos universitarios"] },
+
+  // Candidatos presidenciales reales (algunos partidos tenían VP en el grafo)
+  { id: "vasquez_lucio", label: "Lucio Vásquez Sánchez", role: "Candidato 2026 · Partido Aprista Peruano", size: 12, party: "Partido Aprista Peruano" },
+  { id: "guillen_monica", label: "Mónica Guillén Tuanama", role: "Candidata 2026 · Progresemos", size: 11, party: "Progresemos" },
+  { id: "vega_julio", label: "Julio Vega Ibáñez", role: "Candidato 2026 · Partido PRIN", size: 11, party: "Partido PRIN" },
+  { id: "molina_raul", label: "Raúl Molina Martínez", role: "Candidato 2026 · Primero la Gente", size: 11, party: "Primero la Gente" },
+  { id: "becerra_napoleon", label: "Napoleón Becerra García", role: "Candidato 2026 · PTE Perú", size: 10, party: "PTE Perú" },
+  // Familiares con relevancia política
+  { id: "virgilio_acuña", label: "Virgilio Acuña Peralta", role: "Candidato 2026 · Partido Democrático Federal", size: 12, party: "Partido Democrático Federal", tags: ["Hermano de César Acuña", "Ex-congresista"] },
+  // VPs con antecedentes penales
+  { id: "hancco", label: "Dina Hancco Hancco", role: "VP 2026 · Partido Cívico Obras", size: 10, party: "Partido Cívico Obras", tags: ["Contrabando 2017 (suspendida)"] },
+  { id: "murazzo", label: "Félix Murazzo Carrillo", role: "VP 2026 · Partido Demócrata Verde", size: 10, party: "Partido Demócrata Verde", tags: ["Proceso: Desaparición forzada (1992)"] },
+  { id: "carcovich", label: "Jorge Carcovich Cortelezzi", role: "VP 2026 · Partido Patriótico del Perú", size: 10, party: "Partido Patriótico del Perú", tags: ["Homicidio calificado — ABSUELTO"] },
 
   // Actores judiciales / otros
   { id: "montesinos", label: "Vladimiro Montesinos", role: "Exasesor de inteligencia", size: 18, tags: ["Preso", "Base Naval Callao"] },
@@ -685,6 +701,39 @@ const links = [
   // Conexiones históricas adicionales
   { source: "molinelli", target: "ppk", type: "vinculo_politico", detail: "Ministra de Desarrollo Social en gobierno de PPK (2017-2018)." },
   { source: "villanueva_luis", target: "vizcarra", type: "vinculo_politico", detail: "Director EsSalud durante gobierno de Vizcarra (2018-2021)." },
+
+  // FAMILIA ACUÑA
+  { source: "virgilio_acuña", target: "acuña", type: "familiar", detail: "Hermanos. Virgilio candidato por partido rival (Dem. Federal)." },
+  { source: "virgilio_acuña", target: "masse", type: "vinculo_politico", detail: "Comparten fórmula en Partido Democrático Federal." },
+
+  // VPs con antecedentes vinculados a su presidente
+  { source: "hancco", target: "belmont", type: "vinculo_politico", detail: "VP2 de Belmont. Condena por contrabando 2017 (suspendida)." },
+  { source: "hancco", target: "caso_contrabando", type: "condenado", detail: "3 años 6 meses pena suspendida. Tribunal Juliaca 2017." },
+  { source: "murazzo", target: "gonzales_castillo", type: "vinculo_politico", detail: "VP de Gonzales Castillo (Dem. Verde)." },
+  { source: "murazzo", target: "caso_desaparicion_forzada", type: "investigado", detail: "Proceso Exp. 00125-2023 por hechos de 1992. En casación." },
+  { source: "carcovich", target: "caller", type: "vinculo_politico", detail: "VP de Caller (Partido Patriótico). Absuelto de homicidio calificado." },
+
+  // MARIO VIZCARRA - PECULADO
+  { source: "vizcarra_mario", target: "caso_peculado_regional", type: "condenado", detail: "Peculado (2005). Rehabilitado." },
+  { source: "cerron", target: "caso_peculado_regional", type: "investigado", detail: "Gobernador Regional Junín. Colusión y neg. incompatible (sentencias anuladas/absueltas 2024-25)." },
+
+  // NIETO MONTESINOS - ex-Ministro
+  { source: "nieto_montesinos", target: "alan_garcia", type: "vinculo_politico", detail: "Ministro del Interior y Defensa en el segundo gobierno de García (2006-2011)." },
+
+  // ALTUVE - ERA FUJIMORI
+  { source: "altuve", target: "a_fujimori", type: "vinculo_politico", detail: "Congresista 2000-2001 bajo Perú 2000 (partido de Fujimori)." },
+
+  // MOLINELLI - gobiernos PPK/Vizcarra
+  { source: "molinelli", target: "vizcarra", type: "vinculo_politico", detail: "Presidenta EsSalud durante gobierno Vizcarra (2018-2021)." },
+
+  // QUINTANILLA - historial izquierda
+  { source: "quintanilla_a", target: "cerron", type: "vinculo_politico", detail: "Historial en izquierda: Frente Amplio (2016-2019), Partido Socialista." },
+
+  // PEREZ TELLO - ex-Ministra
+  { source: "perez_tello", target: "ppk", type: "vinculo_politico", detail: "Ministra de Justicia en gobierno PPK." },
+
+  // NUEVA FAMILIA VP
+  { source: "soto_alejandro", target: "caso_peculado_regional", type: "vinculo_politico", detail: "Presidente del Congreso 2023. Vinculado a gestión Acuña-APP." },
 ];
 
 // ============ BUILD ============
