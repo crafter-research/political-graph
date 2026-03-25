@@ -548,10 +548,10 @@ const politicians = [
   { id: "lopez_aliaga", label: "Rafael López Aliaga", role: "Candidato 2026 · Renovación Popular", size: 18, party: "Renovación Popular", tags: ["Alcalde de Lima"] },
   { id: "lopez_chau", label: "Alfonso López Chau", role: "Candidato 2026 · Ahora Nación", size: 14, party: "Ahora Nación" },
   { id: "atencio", label: "Ronald Atencio Sotomayor", role: "Candidato 2026 · Alianza Electoral Venceremos", size: 11, party: "Alianza Electoral Venceremos" },
-  { id: "acuña", label: "César Acuña Peralta", role: "Candidato 2026 · Alianza para el Progreso", size: 16, party: "Alianza para el Progreso" },
+  { id: "acuña", label: "César Acuña Peralta", role: "Candidato 2026 · Alianza para el Progreso", size: 16, party: "Alianza para el Progreso", tags: ["157 vehículos declarados", "Sentencia civil alimentos", "Controla Universidad César Vallejo"] },
   { id: "williams", label: "José Daniel Williams Zapata", role: "Candidato 2026 · Avanza País", size: 13, party: "Avanza País" },
   { id: "paz_de_la_barra", label: "Álvaro Paz de la Barra", role: "Candidato 2026 · Fe en el Perú", size: 12, party: "Fe en el Perú" },
-  { id: "molinelli", label: "Fiorella Molinelli Aristondo", role: "Candidata 2026 · Fuerza y Libertad", size: 12, party: "Fuerza y Libertad" },
+  { id: "molinelli", label: "Fiorella Molinelli Aristondo", role: "Candidata 2026 · Fuerza y Libertad", size: 12, party: "Fuerza y Libertad", tags: ["Ministra Desarrollo Social 2017-2018", "Presidenta EsSalud 2018-2021"] },
   { id: "sanchez_palomino", label: "Roberto Sánchez Palomino", role: "Candidato 2026 · Juntos por el Perú", size: 11, party: "Juntos por el Perú" },
   { id: "belaunde_llosa", label: "Rafael Belaunde Llosa", role: "Candidato 2026 · Libertad Popular", size: 12, party: "Libertad Popular" },
   { id: "valderrama", label: "Pitter Valderrama Peña", role: "Candidato 2026 · Partido Aprista Peruano", size: 13, party: "Partido Aprista Peruano" },
@@ -567,7 +567,7 @@ const politicians = [
   { id: "caller", label: "Herbert Caller Gutiérrez", role: "Candidato 2026 · Partido Patriótico del Perú", size: 11, party: "Partido Patriótico del Perú" },
   { id: "lescano", label: "Yonhy Lescano Ancieta", role: "Candidato 2026 · Cooperación Popular", size: 13, party: "Cooperación Popular" },
   { id: "bermejo", label: "Guillermo Bermejo", role: "Candidato 2026 · Voces del Pueblo", size: 11, party: "Voces del Pueblo", tags: ["Sentencia terrorismo"] },
-  { id: "cerron", label: "Vladimir Cerrón", role: "Fundador Perú Libre", size: 15, party: "Perú Libre", tags: ["Prófugo", "Sentencia corrupción"] },
+  { id: "cerron", label: "Vladimir Cerrón", role: "Candidato 2026 · Perú Libre", size: 15, party: "Perú Libre", tags: ["Candidato presidencial", "Sentencias anuladas/absuelto 2024-25", "Colusión · Negociación incompatible"] },
   { id: "grozo", label: "Wolfgang Grozo Costa", role: "Candidato 2026 · Integridad Democrática", size: 13, party: "Integridad Democrática" },
   { id: "diez_canseco", label: "Francisco Diez-Canseco Távara", role: "Candidato 2026 · Perú Acción", size: 12, party: "Perú Acción" },
   { id: "vizcarra_mario", label: "Mario Vizcarra Cornejo", role: "Candidato 2026 · Perú Primero", size: 12, party: "Perú Primero" },
@@ -580,6 +580,18 @@ const politicians = [
   { id: "ortiz_villano", label: "Antonio Ortiz Villano", role: "Candidato 2026 · Salvemos al Perú", size: 11, party: "Salvemos al Perú" },
   { id: "fernandez_bazan", label: "Rosario Fernández Bazán", role: "Candidata 2026 · Un Camino Diferente", size: 12, party: "Un Camino Diferente" },
   { id: "chiabra", label: "Roberto Chiabra León", role: "Candidato 2026 · Unidad Nacional", size: 13, party: "Unidad Nacional" },
+
+  // Vicepresidentes y fórmulas 2026
+  { id: "galarreta", label: "Luis Galarreta Velarde", role: "1er VP 2026 · Fuerza Popular", size: 11, party: "Fuerza Popular", tags: ["Secretario General FP 2020-2024"] },
+  { id: "torres_miguel", label: "Miguel Torres Morales", role: "2do VP 2026 · Fuerza Popular", size: 10, party: "Fuerza Popular" },
+  { id: "violeta", label: "Gilbert Violeta López", role: "1er VP 2026 · Fuerza y Libertad", size: 10, party: "Fuerza y Libertad", tags: ["Fundador Partido Contigo 2011-2021"] },
+  { id: "altuve", label: "Fernan Altuve-Febres", role: "1er VP 2026 · Avanza País", size: 11, party: "Avanza País", tags: ["Congresista Perú 2000 (era Fujimori)"] },
+  { id: "tumi", label: "Jessica Tumi Rivas", role: "1er VP 2026 · Alianza para el Progreso", size: 10, party: "Alianza para el Progreso" },
+  { id: "soto_alejandro", label: "Alejandro Soto Reyes", role: "2do VP 2026 · Alianza para el Progreso", size: 11, party: "Alianza para el Progreso", tags: ["3 sentencias difamación (suspendidas)"] },
+  { id: "villanueva_luis", label: "Luis Villanueva Carbajal", role: "1er VP 2026 · Ahora Nación", size: 10, party: "Ahora Nación", tags: ["Director EsSalud 2018-2023"] },
+  { id: "buendia", label: "Ruth Buendía Mestoquiari", role: "2da VP 2026 · Ahora Nación", size: 10, party: "Ahora Nación", tags: ["Dirigente AIDESEP", "Derechos indígenas"] },
+  { id: "rivera_elena", label: "Elena Rivera Huaman", role: "1er VP 2026 · Alianza Electoral Venceremos", size: 10, party: "Alianza Electoral Venceremos" },
+  { id: "quintanilla_a", label: "Alberto Quintanilla Chacón", role: "2do VP 2026 · Alianza Electoral Venceremos", size: 10, party: "Alianza Electoral Venceremos", tags: ["Ex-Frente Amplio", "6 títulos universitarios"] },
 
   // Actores judiciales / otros
   { id: "montesinos", label: "Vladimiro Montesinos", role: "Exasesor de inteligencia", size: 18, tags: ["Preso", "Base Naval Callao"] },
@@ -646,6 +658,33 @@ const links = [
   // Cross-links políticos
   { source: "cerron", target: "bermejo", type: "vinculo_politico", detail: "Ambos de Perú Libre, luego separados." },
   { source: "lopez_aliaga", target: "keiko", type: "vinculo_politico", detail: "Bloque conservador en Congreso (FP + RP)." },
+
+  // FÓRMULAS 2026 — Fuerza Popular
+  { source: "galarreta", target: "keiko", type: "vinculo_politico", detail: "1er Vicepresidente. Secretario General FP 2020-2024." },
+  { source: "torres_miguel", target: "keiko", type: "vinculo_politico", detail: "2do Vicepresidente Fuerza Popular." },
+
+  // FÓRMULAS 2026 — Fuerza y Libertad
+  { source: "violeta", target: "molinelli", type: "vinculo_politico", detail: "1er Vicepresidente. Fundador Partido Contigo." },
+
+  // FÓRMULAS 2026 — Avanza País
+  { source: "altuve", target: "williams", type: "vinculo_politico", detail: "1er Vicepresidente Avanza País." },
+  { source: "altuve", target: "vladivideos", type: "vinculo_politico", detail: "Congresista Perú 2000 durante era Fujimori-Vladivideos." },
+
+  // FÓRMULAS 2026 — Alianza para el Progreso
+  { source: "tumi", target: "acuña", type: "vinculo_politico", detail: "1er Vicepresidenta Alianza para el Progreso." },
+  { source: "soto_alejandro", target: "acuña", type: "vinculo_politico", detail: "2do Vicepresidente. Tres sentencias por difamación." },
+
+  // FÓRMULAS 2026 — Ahora Nación
+  { source: "villanueva_luis", target: "lopez_chau", type: "vinculo_politico", detail: "1er Vicepresidente. Ex-director EsSalud." },
+  { source: "buendia", target: "lopez_chau", type: "vinculo_politico", detail: "2da Vicepresidenta. Líder indígena AIDESEP." },
+
+  // FÓRMULAS 2026 — Alianza Electoral Venceremos
+  { source: "rivera_elena", target: "atencio", type: "vinculo_politico", detail: "1er Vicepresidenta Alianza Electoral Venceremos." },
+  { source: "quintanilla_a", target: "atencio", type: "vinculo_politico", detail: "2do Vicepresidente. Ex-Frente Amplio." },
+
+  // Conexiones históricas adicionales
+  { source: "molinelli", target: "ppk", type: "vinculo_politico", detail: "Ministra de Desarrollo Social en gobierno de PPK (2017-2018)." },
+  { source: "villanueva_luis", target: "vizcarra", type: "vinculo_politico", detail: "Director EsSalud durante gobierno de Vizcarra (2018-2021)." },
 ];
 
 // ============ BUILD ============
