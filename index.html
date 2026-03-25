@@ -148,32 +148,22 @@ body{
   border:2px solid;
 }
 
-.filter-btn{
-  display:flex;align-items:center;gap:8px;
-  padding:5px 8px;
-  border-radius:5px;
-  font-size:12px;
-  color:var(--text-dim);
+.link-chip{
+  display:inline-flex;align-items:center;gap:5px;
+  padding:3px 8px;
+  border-radius:20px;
+  font-size:10px;font-weight:600;
   cursor:pointer;
-  transition:background 0.15s;
-  border:none;
-  background:none;
-  width:100%;
-  text-align:left;
-}
-.filter-btn:hover{background:var(--surface);}
-.filter-btn.active{color:var(--text);background:var(--surface2);}
-.filter-btn .check{
-  width:14px;height:14px;border-radius:3px;
   border:1px solid var(--border);
-  display:flex;align-items:center;justify-content:center;
-  font-size:10px;
-  flex-shrink:0;
+  background:var(--surface);
+  color:var(--text-muted);
+  white-space:nowrap;flex-shrink:0;
   transition:all 0.15s;
 }
-.filter-btn.active .check{
-  background:var(--yellow);border-color:var(--yellow);color:var(--bg);
-}
+.link-chip:hover{background:var(--surface2);color:var(--text-dim);}
+.link-chip.active{background:var(--surface2);color:var(--text);border-color:rgba(255,255,255,0.15);}
+.link-chip.inactive{opacity:0.3;}
+.link-chip .lc-dot{width:6px;height:6px;border-radius:50%;flex-shrink:0;}
 
 /* STATS BAR */
 .statsbar{
@@ -342,15 +332,6 @@ svg:active{cursor:grabbing;}
 }
 
 /* PARTY CHIPS */
-.chip-wrap{
-  display:flex;flex-wrap:wrap;gap:4px;
-  padding:0 2px;
-  max-height:200px;overflow-y:auto;
-}
-.chip-wrap::-webkit-scrollbar{width:3px;}
-.chip-wrap::-webkit-scrollbar-track{background:transparent;}
-.chip-wrap::-webkit-scrollbar-thumb{background:var(--border);border-radius:2px;}
-
 .party-chip{
   display:inline-flex;align-items:center;
   padding:3px 8px;
@@ -372,17 +353,16 @@ svg:active{cursor:grabbing;}
 }
 .chip-reset{
   display:inline-flex;align-items:center;
-  padding:3px 10px;
+  padding:3px 7px;
   border-radius:20px;
   font-size:10px;font-weight:700;
   cursor:pointer;
   border:1px solid var(--border);
   background:transparent;
   color:var(--text-muted);
-  white-space:nowrap;
+  white-space:nowrap;flex-shrink:0;
   transition:all 0.15s;
   font-family:'JetBrains Mono',monospace;
-  letter-spacing:0.5px;
 }
 .chip-reset:hover{background:var(--surface);color:var(--text);}
 </style>
@@ -638,12 +618,12 @@ function init() {
   // Build link type filters
   const fc = document.getElementById("filter-container");
   Object.entries(LINK_TYPES).forEach(([key, val]) => {
-    const btn = document.createElement("button");
-    btn.className = "filter-btn active";
-    btn.dataset.type = key;
-    btn.innerHTML = `<span class="check">✓</span><span style="color:${val.color}">■</span> ${val.label}`;
-    btn.onclick = () => toggleType(btn, key);
-    fc.appendChild(btn);
+    const chip = document.createElement("span");
+    chip.className = "link-chip active";
+    chip.dataset.type = key;
+    chip.innerHTML = `<span class="lc-dot" style="background:${val.color}"></span>${val.label}`;
+    chip.onclick = () => toggleType(chip, key);
+    fc.appendChild(chip);
   });
 
   // Stats
@@ -882,10 +862,16 @@ function closePanel() {
   document.getElementById("panel").classList.remove("open");
 }
 
-function toggleType(btn, type) {
-  btn.classList.toggle("active");
-  if(activeTypes.has(type)) activeTypes.delete(type);
-  else activeTypes.add(type);
+function toggleType(chip, type) {
+  if(activeTypes.has(type)) {
+    activeTypes.delete(type);
+    chip.classList.remove("active");
+    chip.classList.add("inactive");
+  } else {
+    activeTypes.add(type);
+    chip.classList.add("active");
+    chip.classList.remove("inactive");
+  }
   linkEls.attr("display", d => activeTypes.has(d.type) ? "block" : "none");
 }
 </script>
