@@ -1,7 +1,115 @@
 // SSE clients for live reload
 const clients = new Set<ReadableStreamDefaultController>();
 
-const html = `<!DOCTYPE html>
+const LIVE_RELOAD = `<script>
+  (function() {
+    const es = new EventSource('/reload');
+    es.onerror = function() { es.close(); setTimeout(function() { location.reload(); }, 800); };
+  })();
+<\/script>`;
+
+const landingHtml = `<!DOCTYPE html>
+<html lang="es">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Grafo Político Perú</title>
+<style>
+@import url('https://fonts.googleapis.com/css2?family=JetBrains+Mono:wght@400;500;700;800&family=DM+Sans:wght@300;400;500;600;700&display=swap');
+*{margin:0;padding:0;box-sizing:border-box}
+:root{
+  --bg:#08080c;--surface:rgba(255,255,255,0.04);--surface2:rgba(255,255,255,0.07);
+  --border:rgba(255,255,255,0.08);--text:#f0eef5;--text-dim:#9994a8;--text-muted:#5c5770;
+  --yellow:#ffd23f;--red:#ff4757;--blue:#70a1ff;--orange:#ffa502;--green:#2ed573;
+}
+body{
+  font-family:'DM Sans',sans-serif;
+  background:var(--bg);color:var(--text);
+  min-height:100vh;
+  display:flex;flex-direction:column;align-items:center;justify-content:center;
+  padding:40px 24px;
+}
+.logo{
+  font-family:'JetBrains Mono',monospace;
+  font-size:11px;font-weight:800;letter-spacing:4px;text-transform:uppercase;
+  color:var(--yellow);margin-bottom:48px;
+}
+h1{
+  font-family:'JetBrains Mono',monospace;
+  font-size:clamp(32px,6vw,64px);font-weight:800;
+  color:var(--text);letter-spacing:-1px;line-height:1.1;
+  text-align:center;max-width:700px;margin-bottom:20px;
+}
+h1 span{color:var(--yellow);}
+.sub{
+  font-size:16px;color:var(--text-dim);
+  max-width:480px;text-align:center;line-height:1.7;
+  margin-bottom:48px;
+}
+.stats{
+  display:flex;gap:40px;margin-bottom:52px;flex-wrap:wrap;justify-content:center;
+}
+.stat{text-align:center;}
+.stat-n{
+  font-family:'JetBrains Mono',monospace;
+  font-size:36px;font-weight:800;color:var(--yellow);
+  display:block;line-height:1;margin-bottom:6px;
+}
+.stat-l{font-size:11px;color:var(--text-muted);text-transform:uppercase;letter-spacing:2px;}
+.cta{
+  display:inline-flex;align-items:center;gap:10px;
+  padding:14px 40px;
+  background:var(--yellow);color:#08080c;
+  font-family:'JetBrains Mono',monospace;
+  font-size:12px;font-weight:800;letter-spacing:2px;text-transform:uppercase;
+  border-radius:6px;text-decoration:none;
+  transition:transform 0.15s,box-shadow 0.15s;
+  box-shadow:0 0 40px rgba(255,210,63,0.2);
+}
+.cta:hover{transform:scale(1.04);box-shadow:0 0 60px rgba(255,210,63,0.35);}
+.tags{display:flex;gap:8px;flex-wrap:wrap;justify-content:center;margin-top:48px;}
+.tag{
+  font-size:10px;font-weight:600;padding:4px 10px;border-radius:3px;
+  border:1px solid var(--border);color:var(--text-muted);
+}
+.tag-r{background:rgba(255,71,87,0.08);border-color:rgba(255,71,87,0.2);color:var(--red);}
+.tag-b{background:rgba(112,161,255,0.08);border-color:rgba(112,161,255,0.2);color:var(--blue);}
+.tag-g{background:rgba(46,213,115,0.08);border-color:rgba(46,213,115,0.2);color:var(--green);}
+.disclaimer{
+  position:fixed;bottom:20px;
+  font-family:'JetBrains Mono',monospace;
+  font-size:9px;letter-spacing:1px;color:var(--text-muted);
+}
+</style>
+</head>
+<body>
+<div class="logo">Grafo Político</div>
+<h1>El mapa del poder <span>y la corrupción</span> en Perú</h1>
+<p class="sub">
+  Visualización interactiva de las relaciones entre políticos y casos de corrupción.
+  Data basada en investigaciones fiscales, juicios y fuentes públicas verificadas.
+</p>
+<div class="stats">
+  <div class="stat"><span class="stat-n">46</span><span class="stat-l">Políticos</span></div>
+  <div class="stat"><span class="stat-n">13</span><span class="stat-l">Casos</span></div>
+  <div class="stat"><span class="stat-n">43</span><span class="stat-l">Conexiones</span></div>
+  <div class="stat"><span class="stat-n">26</span><span class="stat-l">Años cubiertos</span></div>
+</div>
+<a class="cta" href="/graph">Explorar grafo →</a>
+<div class="tags">
+  <span class="tag tag-r">Lava Jato</span>
+  <span class="tag tag-r">Vladivideos</span>
+  <span class="tag tag-r">Cuellos Blancos</span>
+  <span class="tag tag-b">Elecciones 2026</span>
+  <span class="tag tag-b">35 Partidos</span>
+  <span class="tag tag-g">Fuentes verificadas</span>
+</div>
+<div class="disclaimer">PROTOTIPO · DATA ILUSTRATIVA BASADA EN FUENTES PÚBLICAS</div>
+${LIVE_RELOAD}
+</body>
+</html>`;
+
+const graphHtml = `<!DOCTYPE html>
 <html lang="es">
 <head>
 <meta charset="UTF-8">
@@ -288,43 +396,6 @@ svg:active{cursor:grabbing;}
 .node-g.dim .outer{fill-opacity:0.03!important;stroke-opacity:0.1!important;}
 
 /* INTRO */
-.intro{
-  position:fixed;inset:0;z-index:500;
-  background:var(--bg);
-  display:flex;flex-direction:column;
-  align-items:center;justify-content:center;
-  gap:12px;
-  transition:opacity 0.6s ease;
-}
-.intro.gone{opacity:0;pointer-events:none;}
-.intro h1{
-  font-family:'JetBrains Mono',monospace;
-  font-size:36px;font-weight:800;
-  color:var(--yellow);
-  letter-spacing:6px;text-transform:uppercase;
-}
-.intro .sub{
-  font-size:14px;color:var(--text-dim);
-  max-width:480px;text-align:center;line-height:1.7;
-}
-.intro .sub strong{color:var(--text);}
-.intro .credit{
-  font-size:11px;color:var(--text-muted);
-  margin-top:4px;
-  font-family:'JetBrains Mono',monospace;
-  letter-spacing:1px;
-}
-.intro button{
-  margin-top:20px;
-  padding:12px 36px;
-  background:var(--yellow);color:var(--bg);
-  border:none;border-radius:6px;
-  font-family:'JetBrains Mono',monospace;
-  font-size:12px;font-weight:800;
-  letter-spacing:2px;text-transform:uppercase;
-  cursor:pointer;transition:transform 0.15s;
-}
-.intro button:hover{transform:scale(1.04);}
 
 .pulse-dot{
   animation:pulse 2s infinite;
@@ -371,17 +442,6 @@ svg:active{cursor:grabbing;}
 </style>
 </head>
 <body>
-
-<div class="intro" id="intro">
-  <h1>Grafo Político</h1>
-  <div class="sub">
-    Mapa de relaciones entre <strong>políticos</strong> y <strong>casos de corrupción</strong> en Perú.<br>
-    Nodos amarillos = personas. Nodos oscuros = casos.<br>
-    Cada conexión está basada en investigaciones fiscales, juicios y data pública.
-  </div>
-  <div class="credit">Prototipo con data verificada</div>
-  <button onclick="launch()">Explorar</button>
-</div>
 
 <div class="topbar">
   <div class="topbar-left">
@@ -599,11 +659,6 @@ let activeTypes = new Set(Object.keys(LINK_TYPES));
 let activePartyFilter = new Set();
 let selectedId = null;
 let sim, linkEls, nodeEls;
-
-function launch() {
-  document.getElementById("intro").classList.add("gone");
-  setTimeout(init, 300);
-}
 
 function init() {
   // Build party chips
@@ -877,16 +932,10 @@ function toggleType(chip, type) {
   }
   linkEls.attr("display", d => activeTypes.has(d.type) ? "block" : "none");
 }
+
+init();
 <\/script>
-<script>
-  (function() {
-    const es = new EventSource('/reload');
-    es.onerror = function() {
-      es.close();
-      setTimeout(function() { location.reload(); }, 800);
-    };
-  })();
-<\/script>
+${LIVE_RELOAD}
 </body>
 </html>`;
 
@@ -910,11 +959,17 @@ const server = Bun.serve({
       });
     }
 
-    return new Response(html, {
+    if (url.pathname === "/graph") {
+      return new Response(graphHtml, {
+        headers: { "Content-Type": "text/html; charset=utf-8" },
+      });
+    }
+
+    return new Response(landingHtml, {
       headers: { "Content-Type": "text/html; charset=utf-8" },
     });
   },
 });
 
-console.log(`Grafo Político → http://localhost:${server.port}`);
-console.log(`Live reload: bun --watch run index.ts`);
+console.log(`Landing → http://localhost:${server.port}`);
+console.log(`Grafo   → http://localhost:${server.port}/graph`);
