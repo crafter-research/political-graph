@@ -35,7 +35,10 @@ import "../styles/graph.css";
         Cada conexion esta basada en investigaciones fiscales, juicios y data publica.
       </div>
       <div class="credit">Prototipo con data verificada</div>
-      <button onclick="launch()">Explorar</button>
+      <div class="intro-actions">
+        <button onclick="launch()">Explorar</button>
+        <a href="https://github.com/crafter-research/political-graph" target="_blank" rel="noopener noreferrer" class="btn-secondary">GitHub</a>
+      </div>
     </div>
 
     <div class="topbar">
@@ -110,6 +113,7 @@ import "../styles/graph.css";
         style="margin-left:auto;display:flex;align-items:center;gap:16px;color:var(--text-muted);font-family:'JetBrains Mono',monospace;font-size:10px;letter-spacing:1px;"
       >
         <span>PROTOTIPO &middot; DATA ILUSTRATIVA BASADA EN FUENTES PUBLICAS</span>
+        <a href="https://github.com/crafter-research/political-graph" target="_blank" rel="noopener noreferrer" style="color:var(--text-muted);text-decoration:none;border-left:1px solid rgba(255,255,255,0.08);padding-left:16px;transition:color 0.15s;" onmouseover="this.style.color='#ffd23f'" onmouseout="this.style.color='var(--text-muted)'">GITHUB</a>
         <a href="/legal" style="color:var(--text-muted);text-decoration:none;border-left:1px solid rgba(255,255,255,0.08);padding-left:16px;transition:color 0.15s;" onmouseover="this.style.color='#ffd23f'" onmouseout="this.style.color='var(--text-muted)'">AVISO LEGAL</a>
       </div>
     </div>

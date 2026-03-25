@@ -291,8 +291,11 @@ svg#canvas:active{cursor:grabbing;}
   font-family:'JetBrains Mono',monospace;
   letter-spacing:1px;
 }
-.intro button{
+.intro-actions{
+  display:flex;align-items:center;gap:12px;
   margin-top:20px;
+}
+.intro button{
   padding:12px 36px;
   background:var(--yellow);color:var(--bg);
   border:none;border-radius:6px;
@@ -302,6 +305,17 @@ svg#canvas:active{cursor:grabbing;}
   cursor:pointer;transition:transform 0.15s;
 }
 .intro button:hover{transform:scale(1.04);}
+.btn-secondary{
+  padding:12px 28px;
+  background:transparent;color:var(--text-muted);
+  border:1px solid var(--border);border-radius:6px;
+  font-family:'JetBrains Mono',monospace;
+  font-size:12px;font-weight:700;
+  letter-spacing:2px;text-transform:uppercase;
+  text-decoration:none;
+  cursor:pointer;transition:all 0.15s;
+}
+.btn-secondary:hover{border-color:var(--text-muted);color:var(--text);transform:scale(1.04);}
 
 .party-chip{
   display:inline-flex;align-items:center;
