@@ -22,3 +22,10 @@ Todo el HTML debe estar embebido en `index.ts` como template literal.
 El servidor debe tener live reload automático.
 **Why:** El usuario no quiere tener que recargar el browser manualmente.
 **How to apply:** Siempre correr con `bun --watch run index.ts`.
+
+---
+
+**Sin Co-Authored-By en commits.**
+No incluir `Co-Authored-By: Claude Sonnet 4.6 <noreply@anthropic.com>` en los mensajes de commit.
+**Why:** El usuario no lo quiere.
+**How to apply:** Al hacer commits, omitir esa línea completamente.
