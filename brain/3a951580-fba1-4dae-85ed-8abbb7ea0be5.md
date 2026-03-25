@@ -1,0 +1,339 @@
+# 3a951580-fba1-4dae-85ed-8abbb7ea0be5
+
+```
+FORMATO ÚNICO DE DECLARACIÓN JURADA DE HOJA DE VIDA DE CANDIDATO (A)
+
+16423581:
+PROCESO ELECTORAL: ELECCIONES GENERALES 2026
+
+WINSTON CLEMENTE HUAMAN HENRIQUEZ
+
+AÑO 2025
+
+I. DATOS PERSONALES
+Las respuestas a las preguntas 1,2,3,4,5 y 6 deberán de coincidir con la información contenida en el DNI vigente. *En la pregunta 7 en caso el(la) postulante haya nacido en el extranjero consignar “país” y dejar en blanco las casillas “Departamento” “Provincia” y “Distrito”
+
+DNI (1) :
+SEXO (2):
+APELLIDO PATERNO (3):
+APELLIDO MATERNO (4):
+NOMBRES (5):
+FECHA DE NACIMIENTO (6):
+
+16423581 MASCULINO
+HUAMAN
+HENRIQUEZ WINSTON CLEMENTE
+23/01/1955
+
+N° CARNÉ DE EXTRANJERÍA; SOLO PARA ELECCIONES MUNICIPALES: Si usted es extranjero, coloque el número asignado por el RENIEC (en el espacio asignado para DNI) o su número de carné de extranjería.
+16423581000000
+
+LUGAR DE NACIMIENTO(7)
+
+PAÍS:
+
+PERÚ
+
+DEPARTAMENTO: LA LIBERTAD
+
+PROVINCIA: PATAZ
+LUGAR DE DOMICILIO
+DEPARTAMENTO: LIMA
+
+DISTRITO:
+
+CHILLIA
+
+PROVINCIA: LIMA
+
+DISTRITO:
+
+LIMA
+
+DIRECCIÓN: ***********************
+
+ORGANIZACIÓN POLÍTICA POR LA QUE POSTULA: PARTIDO DE LOS TRABAJADORES Y EMPRENDEDORES PTE - PERU
+
+CARGO AL QUE POSTULA
+
+PRESIDENTE DE LA REPÚBLICA
+GOBERNADOR REGIONAL
+
+PRIMER VICEPRESIDENTE DE LA REPÚBLICA
+VICEGOBERNADOR REGIONAL
+
+REGIDOR DISTRITAL
+
+SEGUNDO VICEPRESIDENTE DE LA REPÚBLICA
+CONSEJERO REGIONAL
+
+DIPUTADO ALCALDE PROVINCIAL
+
+SENADOR ALCALDE DISTRITAL
+
+REPRESENTANTE ANTE EL PARLAMENTO ANDINO
+REGIDOR PROVINCIAL
+
+CIRCUNSCRIPCIÓN SEGÚN EL CARGO AL QUE POSTULA
+Nota: En caso de que postule a los cargos de PRESIDENTE DE LA REPÚBLICA, PRIMER VICEPRESIDENTE, SEGUNDO VICEPRESIDENTE y/o REPRESENTANTE ANTE EL PARLAMENTO ANDINO no deberá registrar información en las casillas de “circunscripción según el cargo al que postula”.
+
+REGIÓN:
+
+PROVINCIA:
+
+DISTRITO:
+
+ÚNICO NACIONAL
+
+INFORMACIÓN COMPLEMENTARIA:
+
+II. EXPERIENCIA DE TRABAJO EN OFICIOS, OCUPACIONES O PROFESIONES
+Mencione los oficios, ocupaciones o profesiones, que ha tenido en el sector público, privado o independiente, de los últimos diez años, empezando por el más reciente. (solo hasta un máximo de cinco registros)
+
+*En caso el oficio, ocupación o profesión haya sido realizado en el extranjero consignar el “País“ y dejar en blanco “Departamento”, “Provincia” y “Distrito”. Nota: En caso de tener más información que declarar en este rubro, el sistema le permitirá hacerlo.
+¿TENGO INFORMACIÓN POR DECLARAR? SÍ TENGO NO TENGO
+
+EXPERIENCIA LABORAL 1
+
+NOMBRE DEL CENTRO DE
+
+PRESTACIÓN DEL SERVICIO
+
+O TRABAJO:
+
+UNIVERSIDAD NACIONAL PEDRO RUIZ GALLO
+
+OFICIOS /
+OCUPACIONES / PROFESIONES: TECNICO ADMINISTRATIVO III
+
+RUC EMPRESA (OPCIONAL):
+
+DIRECCIÓN: CALLE JUAN XXIII 391 LAMBAYEQUE
+
+DESDE (AÑO): 1981
+
+HASTA (AÑO): 2025
+
+PAÍS*:
+
+PERU
+
+DEPARTAMENTO: LAMBAYEQUE
+
+PROVINCIA: LAMBAYEQUE
+
+DISTRITO:
+
+LAMBAYEQUE
+
+INFORMACIÓN COMPLEMENTARIA:
+III. FORMACIÓN ACADÉMICA
+EDUCACIÓN BÁSICA REGULAR
+¿TENGO INFORMACIÓN POR DECLARAR?
+¿CUENTA CON ESTUDIOS PRIMARIOS? SÍ
+
+SÍ TENGO
+
+NO TENGO
+
+¿ESTUDIOS
+PRIMARIOS CONCLUIDOS? SÍ
+
+¿CUENTA CON
+ESTUDIOS SECUNDARIOS? SÍ
+
+¿ESTUDIOS SECUNDARIOS CONCLUIDOS? SÍ
+1/3
+
+ESTUDIOS NO UNIVERSITARIOS
+(El último estudio realizado) De acuerdo a la Ley Universitaria, Ley N° 30220 señale sus estudios no universitarios. ¿TENGO INFORMACIÓN POR DECLARAR? SÍ TENGO NO TENGO
+ESTUDIOS UNIVERSITARIOS
+¿TENGO INFORMACIÓN POR DECLARAR? SÍ TENGO NO TENGO
+
+¿CUENTA CON ESTUDIOS
+
+UNIVERSITARIOS?:
+
+SÍ
+
+ESTUDIO UNIVERSITARIO 1
+
+NOMBRE DE LA UNIVERSIDAD: UNIVERSIDAD NACIONAL PEDRO RUIZ GALLO
+
+GRADO O TÍTULO:
+
+6 TO ESTUDIOS
+
+AÑO DE OBTENCIÓN:
+
+INFORMACIÓN COMPLEMENTARIA:
+
+ESTUDIOS DE POSGRADO
+
+¿CUENTA CON ESTUDIOS DE POSGRADO? SÍ NO
+
+OTROS ESTUDIOS DE POSGRADO
+
+¿TENGO INFORMACIÓN POR DECLARAR? SÍ TENGO NO TENGO
+
+IV. TRAYECTORIA PARTIDARIA Y/O POLÍTICA DE DIRIGENTE
+
+CARGOS PARTIDARIOS
+(Indique cuál o cuáles son los dos últimos cargos partidarios que ha desempeñado)
+
+¿TENGO INFORMACIÓN POR DECLARAR? SÍ TENGO NO TENGO
+
+CARGO 1
+
+ORGANIZACIÓN
+
+POLÍTICA :
+
+PARTIDO DE LOS TRABAJADORES Y EMPRENDEDORES PTE - PERU
+
+CARGO:
+
+SEGUNDO VICEPRESIDENTE
+
+DESDE (AÑO): 2023
+
+CONCLUIDOS: NO EGRESADO:
+
+HA S TA
+
+LA
+
+HASTA (AÑO): ACTUALIDAD
+
+INFORMACIÓN COMPLEMENTARIA:
+
+CARGO 2
+
+ORGANIZACIÓN
+
+POLÍTICA :
+
+FRENTE DE LOS TRABAJADORES Y EMPRENDEDORES
+
+CARGO:
+
+ÓRGANO DE GOBIERNO - MIEMBRO
+
+DESDE (AÑO): 2025
+
+HASTA (AÑO): 2025
+
+INFORMACIÓN COMPLEMENTARIA:
+CARGOS DE ELECCIÓN POPULAR
+Indique cuál o cuáles son los dos últimos cargos de elección popular que ha desempeñado: *En caso usted fue elegido Presidente(a) Regional o Vicepresidente(a) Regional sírvase marcar la opción con la nomenclatura actual. ¿TENGO INFORMACIÓN POR DECLARAR? SÍ TENGO NO TENGO
+V. RELACIÓN DE SENTENCIAS
+*Indique las sentencias condenatorias firmes impuestas por delitos dolosos y la que incluye las sentencias con reserva del fallo condenatorio ¿TENGO INFORMACIÓN POR DECLARAR? SÍ TENGO NO TENGO
+VI. RELACIÓN DE SENTENCIAS, QUE DECLAREN FUNDADAS LAS DEMANDAS INTERPUESTAS CONTRA LOS CANDIDATOS POR INCUMPLIMIENTO DE OBLIGACIONES FAMILIARES Y/O ALIMENTARIAS, CONTRACTUALES Y LABORALES O POR INCURRIR EN VIOLENCIA FAMILIAR, QUE HUBIERAN QUEDADO FIRMES, O SI NO LAS TUVIERA*.
+*Según el inciso 6 del numeral 23.3 del artículo 23 de la ley N.° 28094, Ley de Organizaciones Políticas
+Nota: En caso de tener más información que declarar en este rubro, el sistema le permitirá hacerlo. ¿TENGO INFORMACIÓN POR DECLARAR? SÍ TENGO NO TENGO
+VII. MENCIÓN DE LAS RENUNCIAS EFECTUADAS A OTROS PARTIDOS, MOVIMIENTOS DE ALCANCE REGIONAL O DEPARTAMENTAL U ORGANIZACIONES POLÍTICAS DE ALCANCE PROVINCIAL Y DISTRITAL DE SER EL CASO
+
+¿TENGO INFORMACIÓN POR DECLARAR? SÍ TENGO NO TENGO
+VIII. DECLARACIÓN JURADA DE INGRESOS DE BIENES Y RENTAS, BIENES MUEBLES DEL DECLARANTE Y SOCIEDAD DE GANANCIALES
+INGRESOS Declarar año fiscal anterior inmediato a la fecha de presentación de las solicitudes de inscripción
+¿TENGO INFORMACIÓN POR DECLARAR? SÍ TENGO NO TENGO
+
+AÑO DECLARADO: 2024
+
+SECTOR PÚBLICO
+
+SECTOR PRIVADO
+
+TOTAL (S/)
+
+REMUNERACIÓN BRUTA ANUAL * (Pago por planillas , sujetos a rentas de quinta categoría)
+
+18,748.02
+
+0.00
+
+18,748.02
+
+RENTA BRUTA ANUAL POR EJERCICIO INDIVIDUAL * (Ejercicio individual de profesión, oficio u otras tareas - rentas de cuarta categoría)
+
+0.00
+
+0.00
+
+0.00
+
+2/3
+
+OTROS INGRESOS ANUALES* (Predios arrendados , subarrendados o cedidos ) (Bienes muebles arrendados , subarrendados o cedidos ) (Intereses originados por colocación de capitales , regalías , rentas vitalicias , etc) (Dietas o similares ) (Rentas de acciones * * )
+
+16,440.00
+
+0.00
+
+16,440.00
+
+* Total de Ingresos antes de impuestos u otras deducciones ** Son los intereses ganados por las acciones
+
+TOTAL INGRESOS (S/): 35,188.02
+
+BIENES INMUEBLES DEL DECLARANTE Y SOCIEDAD DE GANANCIALES
+Nota: En caso de tener más información que declarar en este rubro, el sistema le permitirá hacerlo.
+¿TENGO INFORMACIÓN POR DECLARAR? SÍ TENGO NO TENGO
+
+N°
+
+TIPO DE BIEN DIRECCIÓN
+
+INSCRITO EN SUNARP PARTIDA
+
+VALOR (S/)
+
+VALOR AUTOVALÚO INFORMACIÓN COMPLEMENTARIA
+
+BIENES MUEBLES DEL DECLARANTE Y SOCIEDAD DE GANANCIALES
+(incluir los bienes que posea en el extranjero) Nota: En caso de tener más información que declarar en este rubro, el sistema le permitirá hacerlo.
+¿TENGO INFORMACIÓN POR DECLARAR? SÍ TENGO NO TENGO
+
+N°
+
+VEHÍCULO
+
+PLACA
+
+1
+
+REGISTRO DE
+
+D3Q368
+
+PROPIEDAD
+
+VEHICULAR
+
+CARACTERÍSTICAS AUTOMOVIL DE SEGUNDA
+
+VALOR (S/)
+
+INFORMACIÓN COMPLEMENTARIA
+
+16,000.00
+
+TOTAL BIENES MUEBLES (S/): 16,000.00
+TITULARIDAD DE ACCIONES Y PARTICIPACIONES
+Nota: Se debe declarar acciones y participaciones independientemente de la situación tributaria (estado y condición del contribuyente) de la persona jurídica.
+¿TENGO INFORMACIÓN POR DECLARAR? SÍ TENGO NO TENGO
+
+TIPO DE BIEN A DECLARAR
+
+N° PERSONAJURÍDICA
+
+NÚMERO DE ACCIONES YPARTICIPACIONES VALOR NOMINAL DEL TOTAL DE ACCIONES O PARTICIPACIONES INFORMACIÓN COMPLEMENTARIA
+
+ACCIONES PARTICIPACIONES
+
+IX. INFORMACIÓN ADICIONAL (OPCIONAL)
+
+Nota: En caso de tener información que adicionar o incorporar en cada rubro -que no haya sido interoperatibilizada por la entidad correspondiente- el sistema le permitirá agregarla FECHA EN QUE TERMINÓ DE LLENAR LOS DATOS EN ESTE FORMATO: 22/12/2025 05:44:32
+
+3/3
+```
