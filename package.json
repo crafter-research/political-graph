@@ -1,15 +1,18 @@
 {
   "name": "political-graph",
-  "module": "index.ts",
   "type": "module",
   "private": true,
   "scripts": {
-    "dev": "bun --watch index.ts"
+    "dev": "astro dev",
+    "build": "astro build",
+    "preview": "astro preview",
+    "maria": "bun run maria-server.ts"
   },
-  "devDependencies": {
-    "@types/bun": "latest"
-  },
-  "peerDependencies": {
-    "typescript": "^5"
+  "dependencies": {
+    "@anthropic-ai/sdk": "^0.80.0",
+    "@google/genai": "^1.46.0",
+    "astro": "^6.0.8",
+    "elevenlabs": "^1.59.0",
+    "groq-sdk": "^1.1.2"
   }
 }
