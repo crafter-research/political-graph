@@ -12,11 +12,20 @@
     "astro": "astro"
   },
   "dependencies": {
+    "@astrojs/react": "^5.0.2",
+    "@react-three/drei": "^10.7.7",
+    "@react-three/fiber": "^9.5.0",
     "astro": "^6.0.8",
-    "d3": "^7.9.0"
+    "d3": "^7.9.0",
+    "react": "^19.2.4",
+    "react-dom": "^19.2.4",
+    "three": "^0.183.2"
   },
   "devDependencies": {
     "@types/d3": "^7.4.3",
+    "@types/react": "^19.2.14",
+    "@types/react-dom": "^19.2.3",
+    "@types/three": "^0.183.1",
     "sharp": "^0.34.5"
   }
 }
